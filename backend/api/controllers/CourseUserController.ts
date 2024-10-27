@@ -13,8 +13,8 @@ import * as controllerHelper from '../../modules/ControllerHelper';
 
 export const getAllCourseUsers = async (req: Request, res: Response) => {
   try {
-    const courseItem = await courseUserservice.getAllUsers();
-    controllerHelper.setResponse(courseItem, res);
+    const lstOfCourseItems = await courseUserservice.getAllUsers();
+    controllerHelper.setResponse(lstOfCourseItems, res);
   } catch (error) {
     controllerHelper.setError(error, res);
   }
